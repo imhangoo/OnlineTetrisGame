@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<game>
+	<frame title="Java Tetris" width="1168" height="680" padding="16" windowSize="7">
+		<layer className="ui.LayerBackground" x="0" y="0" w="0" h="0" />
+		<layer className="ui.LayerGame" x="414" y="32" w="320" h="576" />
+		<layer className="ui.LayerDataBase" x="40" y="32" w="320" h="265" />
+		<layer className="ui.LayerDisk" x="40" y="343" w="320" h="265" />
+		<layer className="ui.LayerButton" x="788" y="32" w="320" h="110" />
+		<layer className="ui.LayerNext" x="788" y="188" w="162" h="134" />
+		<layer className="ui.LayerLevel" x="964" y="188" w="144" h="134" />
+		<layer className="ui.LayerPoint" x="788" y="368" w="320" h="186" />
+
+	
+		
+	</frame>
+	<system>
+	
+	</system>
+	<data>
+	
+	</data>
+</game>
