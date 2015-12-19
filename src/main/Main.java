@@ -9,7 +9,7 @@ import ui.JPanelGame;
 
 /**
  * This is the main function.
- * kk
+ * kkk
  * @author Administrator
  *
  */
