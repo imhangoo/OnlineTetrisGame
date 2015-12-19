@@ -7,6 +7,11 @@ import service.GameService;
 import ui.JFrameGame;
 import ui.JPanelGame;
 
+/**
+ * This is the main function.
+ * @author Administrator
+ *
+ */
 public class Main {
 	public static void main(String[] args){
 		// Data source
