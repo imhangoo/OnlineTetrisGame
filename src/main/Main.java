@@ -9,7 +9,7 @@ import ui.JPanelGame;
 
 /**
  * This is the main function.
- * @author Hangoo
+ * @author Hangoo imhangoo
  *
  */
 public class Main {
