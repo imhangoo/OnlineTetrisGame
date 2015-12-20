@@ -27,7 +27,7 @@ public class GameAct {
 	}
 	public GameAct(){
 		
-		this.init(1);
+		this.init(0);
 	}
 	
 	

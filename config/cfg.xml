@@ -6,9 +6,9 @@
 		<layer className="ui.LayerDataBase" x="40" y="32" w="320" h="265" />
 		<layer className="ui.LayerDisk" x="40" y="343" w="320" h="265" />
 		<layer className="ui.LayerButton" x="788" y="32" w="320" h="110" />
-		<layer className="ui.LayerNext" x="788" y="188" w="162" h="134" />
-		<layer className="ui.LayerLevel" x="964" y="188" w="144" h="134" />
-		<layer className="ui.LayerPoint" x="788" y="368" w="320" h="186" />
+		<layer className="ui.LayerNext" x="788" y="188" w="162" h="102" />
+		<layer className="ui.LayerLevel" x="964" y="188" w="144" h="102" />
+		<layer className="ui.LayerPoint" x="788" y="336" w="320" h="152" />
 
 	
 		

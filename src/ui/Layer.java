@@ -32,6 +32,10 @@ public abstract class Layer {
 	protected static final int PADDING = 16;
 	protected static final int SIZE = 7;
 	protected static Image WINDOW_IMG = new ImageIcon("Graphics/window/Window.png").getImage();
+	// number image
+	protected static Image IMG_NUMBER = new ImageIcon("Graphics/string/number.png").getImage(); 
+	protected static final int NUMBER_WIDTH = IMG_NUMBER.getWidth(null)/10;
+	protected static final int NUMBER_HEIGHT = IMG_NUMBER.getHeight(null);
 	/**
 	 * Constructor
 	 */
@@ -64,6 +68,26 @@ public abstract class Layer {
 
 	public void setDto(GameDto dto) {
 		this.dto = dto;
+	}
+	
+	/**
+	 * 
+	 * @param y top-left y
+	 * @param num number to show up
+	 * @param g Graphics object
+	 */
+	
+	protected void drawNumber(int x, int y, int num, Graphics g) {
+		String strNum = Integer.toString(num);
+		// x-value of first digit
+	    
+		for (int i = 0; i < strNum.length(); i++) {
+			int digit = strNum.charAt(i) - '0';
+			g.drawImage(IMG_NUMBER, this.x + SIZE+ x + i * NUMBER_WIDTH, this.y+y,this.x+SIZE+x + NUMBER_WIDTH + i * NUMBER_WIDTH,
+					this.y+SIZE+y + NUMBER_HEIGHT, digit * NUMBER_WIDTH, 0, (digit + 1) * NUMBER_WIDTH, NUMBER_HEIGHT,
+					null);
+		}
+
 	}
 
 
