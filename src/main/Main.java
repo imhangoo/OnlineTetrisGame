@@ -1,7 +1,7 @@
 package main;
 
 import control.GameControl;
-import control.PlayerControl;
+import control.PlayerActionListener;
 import dto.GameDto;
 import service.GameService;
 import ui.JFrameGame;
@@ -9,7 +9,7 @@ import ui.JPanelGame;
 
 /**
  * This is the main function.
- * @author Hangoo imhangoo
+ * @author imhangoo
  *
  */
 public class Main {
@@ -22,10 +22,10 @@ public class Main {
 		GameService service = new GameService(dto);
 		// create game controller(connect game panel and game logics)
 		GameControl gameControl = new GameControl(panel,service);
-		// create player controller(connect to game controller)
-		PlayerControl control = new PlayerControl(gameControl);
-		// Install player controller
-		panel.setGameControl(control);
+		// create player action listener( connect to game controller)
+		PlayerActionListener listener = new PlayerActionListener(gameControl);
+		// Install player action listener
+		panel.setGameControl(listener);
 		// create game window, install game panels
 		JFrameGame jf = new JFrameGame(panel);
 		

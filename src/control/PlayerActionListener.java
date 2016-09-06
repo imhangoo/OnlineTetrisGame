@@ -3,10 +3,10 @@ package control;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-public class PlayerControl extends KeyAdapter{
+public class PlayerActionListener extends KeyAdapter{
 	private GameControl gameControl;
 	
-	public PlayerControl(GameControl gameControl){
+	public PlayerActionListener(GameControl gameControl){
 		this.gameControl = gameControl;
 	}
 
@@ -14,7 +14,6 @@ public class PlayerControl extends KeyAdapter{
     // Key press event
 	@Override
 	public void keyPressed(KeyEvent e) {
-		//TODO this way of listing is not good
 		switch(e.getKeyCode()){
 		case KeyEvent.VK_UP:
 			this.gameControl.keyUp();
@@ -27,6 +26,12 @@ public class PlayerControl extends KeyAdapter{
 		    break;
 		case KeyEvent.VK_RIGHT:
 			this.gameControl.keyRight();
+			break;
+		case KeyEvent.VK_SPACE:
+			this.gameControl.resumeOrSuspend();
+			break;
+		case KeyEvent.VK_Q:
+			this.gameControl.test();
 			break;
 		default:
 			break;

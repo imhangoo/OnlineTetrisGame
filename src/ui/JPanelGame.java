@@ -11,7 +11,7 @@ import config.ConfigFactory;
 import config.GameConfig;
 import config.LayerConfig;
 import control.GameControl;
-import control.PlayerControl;
+import control.PlayerActionListener;
 import dto.GameDto;
 import service.GameService;
 
@@ -39,7 +39,7 @@ public class JPanelGame extends JPanel {
 	/*
 	 * install palyer controller
 	 */
-	public void setGameControl(PlayerControl control){
+	public void setGameControl(PlayerActionListener control){
 		this.addKeyListener(control);
 	}
 	

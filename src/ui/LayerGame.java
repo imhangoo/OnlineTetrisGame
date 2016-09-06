@@ -6,6 +6,8 @@ import java.awt.Point;
 
 import javax.swing.ImageIcon;
 
+import dto.GameDto;
+
 public class LayerGame extends Layer {
 
 	// TODO CONFIG
@@ -21,8 +23,8 @@ public class LayerGame extends Layer {
 
 	public void paint(Graphics g) {
 		this.createWindow(g);
-		Point[] points = this.dto.getGameAct().getActPoints();
-        int typeCode = this.dto.getGameAct().getTypeCode();
+		Point[] points = this.dto.getBlockShape().getActPoints();
+        int typeCode = this.dto.getBlockShape().getTypeCode();
 		// print blocks
 		for (int i = 0; i < points.length; ++i) {
 			drawSquareByPoint(points[i].x, points[i].y, g, typeCode+1);
@@ -30,10 +32,15 @@ public class LayerGame extends Layer {
 
 		this.map = this.dto.getGameMap();
 		// print current map
+		int imgIndex = 0;
+		// if game is over, print broken blocks
+		if(!this.dto.isGameAlive()){
+			imgIndex = 8;
+		};
 		for (int i = 0; i < map.length; i++) {
 			for (int j = 0; j < map[0].length; j++) {
 				if (map[i][j]) {
-					drawSquareByPoint(i, j, g, 0);
+					drawSquareByPoint(i, j, g, imgIndex);
 				}
 			}
 		}

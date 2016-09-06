@@ -9,6 +9,7 @@
 		<layer className="ui.LayerNext" x="788" y="188" w="162" h="102" />
 		<layer className="ui.LayerLevel" x="964" y="188" w="144" h="102" />
 		<layer className="ui.LayerPoint" x="788" y="336" w="320" h="152" />
+		<layer className="ui.LayerAbout" x="788" y="530" w="320" h="75" />
 
 	
 		

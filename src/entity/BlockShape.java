@@ -4,7 +4,7 @@ import java.awt.Point;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GameAct {
+public class BlockShape {
 	private static final int MIN_X = 0;
 	private static int MAX_X = 9;
 	private static int MIN_Y = 0;
@@ -25,7 +25,7 @@ public class GameAct {
 		TYPE_CONFIG.add(new Point[]{new Point(4,0),new Point(3,0),new Point(5,0),new Point(5,1)});
 		TYPE_CONFIG.add(new Point[]{new Point(4,0),new Point(3,0),new Point(4,1),new Point(5,1)});
 	}
-	public GameAct(){
+	public BlockShape(){
 		
 		this.init(0);
 	}

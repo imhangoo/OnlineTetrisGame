@@ -2,18 +2,28 @@ package dto;
 
 import java.util.List;
 
-import entity.GameAct;
+import entity.BlockShape;
+import entity.GameMap;
 
 public class GameDto {
 	private List<Player> dbRecord;
 	private List<Player> diskRecord;
 	private boolean[][] gameMap;
-	private GameAct gameAct;
+	private BlockShape shape;
 	private int next;
 	private int currentLevel;
 	private int currentPoint;
 	private int currentRemovedLine;
+	private boolean gameAlive = true;
 	
+	public boolean isGameAlive() {
+		return gameAlive;
+	}
+
+	public void setGameAlive(boolean gameAlive) {
+		this.gameAlive = gameAlive;
+	}
+
 	public List<Player> getDbRecord() {
 		return dbRecord;
 	}
@@ -23,9 +33,7 @@ public class GameDto {
 	}
 	
 	public void dtoInit(){
-		//TODO hard code
-		this.gameMap = new boolean[10][18];
-		//TODO initialize all game objects
+		this.gameMap = new GameMap().getGameMap();
 	}
 	
 	public void setDbRecord(List<Player> dbRecord) {
@@ -43,11 +51,11 @@ public class GameDto {
 	public void setGameMap(boolean[][] gameMap) {
 		this.gameMap = gameMap;
 	}
-	public GameAct getGameAct() {
-		return gameAct;
+	public BlockShape getBlockShape() {
+		return shape;
 	}
-	public void setGameAct(GameAct gameAct) {
-		this.gameAct = gameAct;
+	public void setGameAct(BlockShape shape) {
+		this.shape = shape;
 	}
 	public int getNext() {
 		return next;
